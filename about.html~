@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Familiar 
+Description: A two-column, fixed-width design for 1024x768 screen resolutions.
+Version    : 1.0
+Released   : 20091206
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>毕业要求计算器</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+	<div id="logo">
+		<h1><a href="#">毕业要求计算器  </a></h1>
+		<p><em> extension by cyblocker</em></p>
+	</div>
+	<hr />
+	<!-- end #logo -->
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" class="first">首页</a></li>
+				<li><a href="options.html">选项</a></li>
+				<li class="current_page_item"><a href="#">关于</a></li>
+				<li><a href="contact.html">联系</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+		<!-- end #search -->
+	</div>
+	<!-- end #header -->
+	<!-- end #header-wrapper -->
+	<div id="page">
+		<div id="content">
+		  <div class="post">
+				<h2 class="title">关于本拓展程序</h2>
+				<div class="entry">
+					<p>我是2010级信息科学技术学院本科生智能班的班长。由于教务处对10级和09级的教学计划进行了较为复杂的调整和解释，很多同学不能准确地估计自己毕业还需要选修的课程数，也不好把握统一的标准，故而本拓展程序的第一个版本应运而生，并通过邮件的方式发送给了同学们。</p>			
+					<p>就在发送出去之后，其他专业的同学也希望这个拓展程序能够支持他们的专业。于是我详细阅读了其他3个专业的教学计划和毕业要求，并且对不明白的一些地方问了同学，使得这个拓展程序支持了信息科学技术学院下设的全部4个专业。另外，为了用户使用方便，我增加了自动检测专业的功能。为了方便元培学院以及其他还未分专业的同学使用，保留了手动选择专业的功能。</p>
+					<p>一位我的好朋友询问我，是否可以将拓展程序添加对化学与分子工程学院的支持，我答应了他。在增加化学与分子工程学院相关内容的同时，对整个拓展程序进行了重构，对代码结构进行了整理，留出了足够多的拓展接口。</p>
+					<p>在北大未名BBS上发布该程序后，出现许多的BUG，以至于我无法闲适下来。我用了几天的时间来修复这些已知的问题和错误，并且导致版本号快速增长。我感到每一次修复BUG后都要求所有的用户重新下载这个拓展程序是十分不方便的，所以我将这个拓展程序发布到了chrome应用商店，这样所有的用户都可以进行自动升级。</p>
+					<p>这个拓展程序在现阶段及将来都会是完全免费的，并且不会请求大家进行捐助。您可以将它分发给您的朋友，当然，通过chrome商店的分发，您的朋友也可以随时用到最新版本的毕业要求计算器。</p>
+			</div>
+		  </div>
+			<div class="post">
+				<h2 class="title">关于我</h2>
+				<div class="entry">
+					<p>在颐和园念书，大三学生，读智能科学，现在在北京大学DLIB组进行科研实习。</p>
+					<p>写这个应用所用到的Web相关技术对我来说是完全陌生的，刚刚开始学，如果有指导欢迎发来。</p>
+					<p>自认为不是Geek而是“文青”，虽然做图不精，音乐不精，摄影也不精，而且几乎就快荒废了……但是还是渴望这方面的交流与发展～</p>
+					<p>作者陈云帆在此非常感谢您使用我开发的拓展程序，如果愿意的话，不妨到chrome应用商店评个分数。</p>
+				</div>
+			</div>
+			
+		</div><!-- end #content -->
+
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+	<div id="footer">
+		<p>Copyright (c) 2012 cyblocker. All rights reserved. Design by <a href="http://www.freecsstemplates.org">FCT</a>.</p>
+	</div>
+	<!-- end #footer -->
+</body>
+</html>

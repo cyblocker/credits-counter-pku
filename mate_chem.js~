@@ -1,0 +1,105 @@
+	var GPAtable = document.getElementsByTagName("td");
+	//alert(GPAtable.length);
+	var count = Array(0,0,0);//大类平台、专业必修、专业选修
+	var CreditNeeds = Array(18,49.5,29.5);
+	//大类平台必修
+	var daleipingtai = Array("00130201","00130202","00431141","00431143","00431215");
+	var dlptCredit = Array(5,5,3,3,2);
+	//大类平台选修
+	var daleipingtaixuan = Array("00431142","00431144","00131460");
+	var dlptxCredit = Array(2,2,4);
+	//专业必修
+	var zhuanyebixiu = Array("01034310","01034321","01030200","01031100","01034350","01034360","01034371","01034381","01034390","01034373","01035000","01034410","01034460","01034440","01032860","01034400","01034930","01035010","01034450","01034480","01035020","01034490");
+	var zybxCredit = Array(4,2.5,1,1,2,2,3,2,2,2,1.5,3,2,2,2,2,4,3.5,2,1,2,3,);
+	//专业选修
+	var zhuanyexuanxiu = Array("01034520","01034530","01035040","01034600","01034690","01034640","01034630","01034670","01034650","01034610","01034680","01034580","01032390","01034720","01034970","01034980","01034590","01032530","01034551","01035030","01034710","01034960","01032580","01034780","01034790","01034800","01030440","01034500","01034660","01034990");
+	var zyxxCredit = Array(1,2,1.5,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,1.5,2,2,2,2,2,2,2,3,1,2);
+
+	for(var i = 0; i < GPAtable.length; i++)
+	{
+		var j;
+		for(j = 0; j < daleipingtai.length ; j++)
+		{
+			if(GPAtable[i].firstChild.nodeValue == daleipingtai[j] && GPAtable[i+1].firstChild.nodeValue >= 60)
+			{
+				count[0] += dlptCredit[j];
+				break;
+			}
+		}
+		if(j < daleipingtai.length)
+			continue;
+		for(j = 0; j < zhuanyebixiu.length ; j++)
+		{
+			if(GPAtable[i].firstChild.nodeValue == zhuanyebixiu[j] && GPAtable[i+1].firstChild.nodeValue >= 60)
+			{
+				count[1] += zybxCredit[j];
+				break;
+			}
+		}
+		if(j < zhuanyebixiu.length)
+			continue;
+		for(j = 0; j < zhuanyexuanxiu.length ; j++)
+		{
+			if(GPAtable[i].firstChild.nodeValue == zhuanyexuanxiu[j] && GPAtable[i+1].firstChild.nodeValue >= 60)
+			{
+				count[2] += zyxxCredit[j];
+				break;
+			}
+		}
+		if(j < zhuanyexuanxiu.length)
+			continue;
+		for(j = 0; j < daleipingtaixuan.length ; j++)
+		{
+			if(GPAtable[i].firstChild.nodeValue == daleipingtaixuan[j] && GPAtable[i+1].firstChild.nodeValue >= 60)
+			{
+				count[2] += dlptxCredit[j];
+				break;
+			}
+		}
+		if(j < daleipingtaixuan.length)
+			continue;
+	}
+	var result = "";
+	var start = false;
+	if(count[0] >= CreditNeeds[0])
+	{
+		count[1] += count[0] - CreditNeeds[0];
+		count[0] = CreditNeeds[0];
+	}
+	else
+	{
+		if(start == true)
+			result += "\n            "
+		else
+			result += "您仍需选修：\n            "
+		result += "大类平台 " + (CreditNeeds[0]-count[0]) + " 学分";
+		start = true;
+	}
+	if(count[1] >= CreditNeeds[1])
+	{
+		count[2] += count[1] - CreditNeeds[1];
+		count[1] = CreditNeeds[1];
+	}
+	else
+	{
+		if(start == true)
+			result += "\n            "
+		else
+			result += "您仍需选修：\n            "
+		result += "专业必修 " + (CreditNeeds[1]-count[1]) + " 学分";
+		start = true;
+	}
+	if(count[2] < CreditNeeds[2])
+	{
+		if(start == true)
+			result += "\n            "
+		else
+			result += "您仍需选修：\n            "
+		result += "专业选修 " + (CreditNeeds[2]-count[2]) + " 学分";
+		start = true;
+	}
+	if(start == false)
+	{
+		result += "恭喜您的专业课已经达到毕业需求！"
+	}
+	alert(result);

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Familiar 
+Description: A two-column, fixed-width design for 1024x768 screen resolutions.
+Version    : 1.0
+Released   : 20091206
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Credit Counter</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<script type="text/javascript">
+// Saves options to localStorage.
+function save_options() {
+  var select = document.getElementById("major");
+  var color = select.children[select.selectedIndex].value;
+  localStorage["cc_major"] = color;
+  // Update status to let user know options were saved.
+  var status = document.getElementById("status");
+  status.innerHTML = "change saved!";
+  setTimeout(function() {
+    status.innerHTML = "";
+  }, 750);
+}
+// Restores select box state to saved value from localStorage.
+function restore_options() {
+  var favorite = localStorage["cc_major"];
+  if (!favorite) {
+    return;
+  }
+  var select = document.getElementById("major");
+  for (var i = 0; i < select.children.length; i++) {
+    var child = select.children[i];
+    if (child.value == favorite) {
+      child.selected = "true";
+      break;
+    }
+  }
+}
+</script>
+<body onload="restore_options()">
+	<div id="logo">
+		<h1><a href="#">Credit Counter  </a></h1>
+		<p><em> extension by cyblocker</em></p>
+	</div>
+	<hr />
+	<!-- end #logo -->
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" class="first">Home</a></li>
+				<li class="current_page_item"><a href="#">Option</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+		<!-- end #search -->
+	</div>
+	<!-- end #header -->
+	<!-- end #header-wrapper -->
+	<div id="page">
+		<div id="content">
+		  <div class="post">
+				<h2 class="title">Config your major</h2>
+				<div class="entry">
+					<p>your major:</p>
+						<select id="major">
+						 <option value="auto_detect">Auto Detection</option>
+						 <option value="cis">Intelligent Science and Technology</option>
+						 <option value="cs">Computer Science and Technology</option>
+						 <option value="ee">Electronics and Information Science and Technology</option>
+						 <option value="ime">Microelectronics</option>
+						 <option value="chemistry">Chemistry</option>
+						 <option value="mate_chem">Material Chemistry</option>
+						 <option value="app_chem">Applied Chemistry</option>
+						 <option value="bio_chem">Chemistry (Chemical Biology)</option>
+						</select>
+						<br>
+						<button onclick="save_options()">Save!</button>		
+			</div>
+		  </div>			
+		</div><!-- end #content -->
+		<div id="sidebar">
+			<ul>
+				<li>
+					<h2>Attention!</h2>
+					<p>If you're not student from Yuanpei College and have chosen your major, no change in this page is required.</p>
+				</li>
+				<li>
+					<h2>Links </h2>
+					<ul>
+						<li><a href="http://weibo.com/chenyunfan">My Weibo</a></li>
+						<li><a href="http://blog.sina.com.cn/chenyunfan">My previous blog</a></li>
+						<li><a href="http://www.freecsstemplates.org/">Where I got this CSS</a></li> 
+						<li><a href="http://www.pkudlib.org/">PKU dlib Group</a></li> 
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+	<div id="footer">
+		<p>Copyright (c) 2012 cyblocker. All rights reserved. Design by <a href="http://www.freecsstemplates.org">FCT</a>.</p>
+	</div>
+	<!-- end #footer -->
+</body>
+</html>

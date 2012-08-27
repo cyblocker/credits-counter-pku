@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Familiar 
+Description: A two-column, fixed-width design for 1024x768 screen resolutions.
+Version    : 1.0
+Released   : 20091206
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Credit Counter</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+	<div id="logo">
+		<h1><a href="#">毕业要求计算器  </a></h1>
+		<p><em> extension by cyblocker</em></p>
+	</div>
+	<hr />
+	<!-- end #logo -->
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" class="first">首页</a></li>
+				<li><a href="options.html">选项</a></li>
+				<li><a href="about.html">关于</a></li>
+				<li class="current_page_item"><a href="#">联系</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+		<!-- end #search -->
+	</div>
+	<!-- end #header -->
+	<!-- end #header-wrapper -->
+	<div id="page">
+		<div id="content">
+		  <div class="post">
+				<h2 class="title">联系我</h2>
+				<div class="entry">
+					<p>您可以通过以下方式联系我：</p>
+					<p>1. 发送邮件到: cyf#pkudlib.org. (Replace # by @)</p>			
+					<p>2. 通过 <a href="http://www.bdwm.net">BDWM BBS</a> 给 cyblocker 发送站内信件</p>
+			</div>
+		  </div>
+			<div class="post">
+				<h2 class="title">报告程序的错误或建议</h2>
+				<div class="entry">
+					<p>您可以用上述方式联系我来报告。 或者，使用chrome商店提供的 <a href="https://chrome.google.com/webstore/support/gmbpidmpajhhnmffidhembfmipmmngol#bug">反馈功能</a> 进行报告。我会尽快修复他们。</p>
+				</div>
+			</div>
+			
+		</div><!-- end #content -->
+
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+	<div id="footer">
+		<p>Copyright (c) 2012 cyblocker. All rights reserved. Design by <a href="http://www.freecsstemplates.org">FCT</a>.</p>
+	</div>
+	<!-- end #footer -->
+</body>
+</html>
