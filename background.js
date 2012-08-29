@@ -25,6 +25,8 @@
 	{
 		//alert(tab.url);
 			var major = localStorage["cc_major"];
+			//alert(major);
+			//major = "ime";
 			if((!major) || major == "auto_detect")
 				chrome.tabs.executeScript(null, {file: "content_script.js"});
 			else

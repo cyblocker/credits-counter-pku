@@ -267,6 +267,17 @@ if(major.indexOf("Computer") > -1)
 		result += "专业必修 " + (CreditNeeds[0]-count[0]) + " 学分";
 		start = true;
 	}
+	var start2 = true;
+	if(count[2]+count[1] < 43)
+	{
+		if(start == true)
+			result += "\n            "
+		else
+			result += "您仍需选修：\n            "
+		result += "限选或任选 " + (43-count[2]-count[1]) + " 学分\n            （包括专业限选和核心任选）";
+		start2 = false;
+		start = true;
+	}
 	if(count[1] >= CreditNeeds[1])
 	{
 		count[2] += count[1] - CreditNeeds[1];
@@ -277,6 +288,8 @@ if(major.indexOf("Computer") > -1)
 			result += "\n            "
 		else
 			result += "您仍需选修：\n            "
+		if(start2 == false)
+			{result += "其中：";start2=true;}
 		result += "专业限选 " + (CreditNeeds[1]-count[1]) + " 学分";
 		start = true;
 	}
@@ -286,16 +299,11 @@ if(major.indexOf("Computer") > -1)
 			result += "\n            "
 		else
 			result += "您仍需选修：\n            "
-		result += "核心任选 " + (CreditNeeds[2]-count[2]) + " 学分";
-		start = true;
-	}
-	if(count[2]+count[1] < 43)
-	{
-		if(start == true)
-			result += "\n            "
+		if(start2 == false)
+			{result += "其中：";start2=true;}
 		else
-			result += "您仍需选修：\n            "
-		result += "限选或任选 " + (43-count[2]-count[1]) + " 学分\n            （包括专业限选和核心任选）";
+			result += "               "
+		result += "核心任选 " + (CreditNeeds[2]-count[2]) + " 学分";
 		start = true;
 	}
 	if(start == false)
@@ -430,6 +438,17 @@ if(major.indexOf("Electronic") > -1)
 		result += "专业必修 " + (CreditNeeds[0]-count[0]) + " 学分";
 		start = true;
 	}
+	var start2 = true;
+	if(count[1]+count[2] + count[3]  < 41)
+	{
+		if(start == true)
+			result += "\n            "
+		else
+			result += "您仍需选修：\n            "
+		result += "专业选修课共 " + (41-count[2]-count[1]-count[3]-count[4]) + " 学分\n            (包括专业限选、核心课程及专业任选)";
+		start = true;
+		start2 = false;
+	}
 	if(count[1] >= CreditNeeds[1])
 	{
 		count[2] += count[1] - CreditNeeds[1];
@@ -441,6 +460,8 @@ if(major.indexOf("Electronic") > -1)
 			result += "\n            "
 		else
 			result += "您仍需选修：\n            "
+		if(start2 == false)
+			{result += "其中：";start2=true;}
 		result += "专业限选 " + (CreditNeeds[1]-count[1]) + " 学分";
 		start = true;
 	}
@@ -455,6 +476,9 @@ if(major.indexOf("Electronic") > -1)
 			result += "\n            "
 		else
 			result += "您仍需选修：\n            "
+		if(start2 == false)
+			{result += "其中：";start2=true;}
+		else result += "               "
 		result += "核心课程 " + (CreditNeeds[2]-count[2]) + " 学分";
 		start = true;
 	}
@@ -464,16 +488,10 @@ if(major.indexOf("Electronic") > -1)
 			result += "\n            "
 		else
 			result += "您仍需选修：\n            "
+		if(start2 == false)
+			{result += "其中：";start2=true;}
+		else result += "               "
 		result += "专业任选 " + (CreditNeeds[3]-count[3]) + " 学分";
-		start = true;
-	}
-	if(count[1]+count[2] + count[3]  < 41)
-	{
-		if(start == true)
-			result += "\n            "
-		else
-			result += "您仍需选修：\n            "
-		result += "专业选修课共 " + (41-count[2]-count[1]-count[3]-count[4]) + " 学分\n            (包括专业限选、核心课程及专业任选)";
 		start = true;
 	}
 	if(start == false)
@@ -491,7 +509,7 @@ if(major.indexOf("Electronic") > -1)
 /**************************/
 if(major.indexOf("Microelectronics") > -1)
 {
-		var GPAtable = document.getElementsByTagName("td");
+	var GPAtable = document.getElementsByTagName("td");
 	//alert(GPAtable.length);
 	var count = Array(0,0);
 	var CreditNeeds = Array(30,43);
@@ -614,6 +632,7 @@ if(major.indexOf("Microelectronics") > -1)
 		result += "专业必修 " + (CreditNeeds[0]-count[0]) + " 学分";
 		start = true;
 	}
+	var start2 = true;
 	if(count[1] < CreditNeeds[1])
 	{
 		if(start == true)
@@ -621,6 +640,7 @@ if(major.indexOf("Microelectronics") > -1)
 		else
 			result += "您仍需选修：\n            "
 		result += "选修课程 " + (CreditNeeds[1]-count[1]) + " 学分";
+		start2 = false;
 		start = true;
 	}
 	if(lljc < 3)
@@ -629,6 +649,9 @@ if(major.indexOf("Microelectronics") > -1)
 			result += "\n            "
 		else
 			result += "您仍需选修：\n            "
+		if(start2 == false)
+			{result += "其中：";start2=true;}
+		else result += "               "
 		result += "理论基础选修 " + (3-lljc) + " 门";
 		start = true;
 	}
@@ -638,6 +661,9 @@ if(major.indexOf("Microelectronics") > -1)
 			result += "\n            "
 		else
 			result += "您仍需选修：\n            "
+		if(start2 == false)
+			{result += "其中：";start2=true;}
+		else result += "               "
 		result += "计算机类选修 " + (1-jsjl) + " 门";
 		start = true;
 	}
@@ -647,6 +673,9 @@ if(major.indexOf("Microelectronics") > -1)
 			result += "\n            "
 		else
 			result += "您仍需选修：\n            "
+		if(start2 == false)
+			{result += "其中：";start2=true;}
+		else result += "               "
 		result += "专业类选修 " + (3-zyl) + " 门";
 		start = true;
 	}

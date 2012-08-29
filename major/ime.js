@@ -121,6 +121,7 @@
 		result += "专业必修 " + (CreditNeeds[0]-count[0]) + " 学分";
 		start = true;
 	}
+	var start2 = true;
 	if(count[1] < CreditNeeds[1])
 	{
 		if(start == true)
@@ -128,6 +129,7 @@
 		else
 			result += "您仍需选修：\n            "
 		result += "选修课程 " + (CreditNeeds[1]-count[1]) + " 学分";
+		start2 = false;
 		start = true;
 	}
 	if(lljc < 3)
@@ -136,6 +138,9 @@
 			result += "\n            "
 		else
 			result += "您仍需选修：\n            "
+		if(start2 == false)
+			{result += "其中：";start2=true;}
+		else result += "               "
 		result += "理论基础选修 " + (3-lljc) + " 门";
 		start = true;
 	}
@@ -145,6 +150,9 @@
 			result += "\n            "
 		else
 			result += "您仍需选修：\n            "
+		if(start2 == false)
+			{result += "其中：";start2=true;}
+		else result += "               "
 		result += "计算机类选修 " + (1-jsjl) + " 门";
 		start = true;
 	}
@@ -154,6 +162,9 @@
 			result += "\n            "
 		else
 			result += "您仍需选修：\n            "
+		if(start2 == false)
+			{result += "其中：";start2=true;}
+		else result += "               "
 		result += "专业类选修 " + (3-zyl) + " 门";
 		start = true;
 	}

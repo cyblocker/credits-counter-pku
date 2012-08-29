@@ -88,6 +88,17 @@
 		result += "专业必修 " + (CreditNeeds[0]-count[0]) + " 学分";
 		start = true;
 	}
+	var start2 = true;
+	if(count[2]+count[1] < 43)
+	{
+		if(start == true)
+			result += "\n            "
+		else
+			result += "您仍需选修：\n            "
+		result += "限选或任选 " + (43-count[2]-count[1]) + " 学分\n            （包括专业限选和核心任选）";
+		start2 = false;
+		start = true;
+	}
 	if(count[1] >= CreditNeeds[1])
 	{
 		count[2] += count[1] - CreditNeeds[1];
@@ -98,6 +109,8 @@
 			result += "\n            "
 		else
 			result += "您仍需选修：\n            "
+		if(start2 == false)
+			{result += "其中：";start2=true;}
 		result += "专业限选 " + (CreditNeeds[1]-count[1]) + " 学分";
 		start = true;
 	}
@@ -107,16 +120,11 @@
 			result += "\n            "
 		else
 			result += "您仍需选修：\n            "
-		result += "核心任选 " + (CreditNeeds[2]-count[2]) + " 学分";
-		start = true;
-	}
-	if(count[2]+count[1] < 43)
-	{
-		if(start == true)
-			result += "\n            "
+		if(start2 == false)
+			{result += "其中：";start2=true;}
 		else
-			result += "您仍需选修：\n            "
-		result += "限选或任选 " + (43-count[2]-count[1]) + " 学分\n            （包括专业限选和核心任选）";
+			result += "               "
+		result += "核心任选 " + (CreditNeeds[2]-count[2]) + " 学分";
 		start = true;
 	}
 	if(start == false)
