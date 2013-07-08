@@ -18,36 +18,8 @@ Released   : 20091206
 <meta name="description" content="" />
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
-<script type="text/javascript">
-// Saves options to localStorage.
-function save_options() {
-  var select = document.getElementById("major");
-  var color = select.children[select.selectedIndex].value;
-  localStorage["cc_major"] = color;
-  // Update status to let user know options were saved.
-  var status = document.getElementById("status");
-  status.innerHTML = "change saved!";
-  setTimeout(function() {
-    status.innerHTML = "";
-  }, 750);
-}
-// Restores select box state to saved value from localStorage.
-function restore_options() {
-  var favorite = localStorage["cc_major"];
-  if (!favorite) {
-    return;
-  }
-  var select = document.getElementById("major");
-  for (var i = 0; i < select.children.length; i++) {
-    var child = select.children[i];
-    if (child.value == favorite) {
-      child.selected = "true";
-      break;
-    }
-  }
-}
-</script>
-<body onload="restore_options()">
+
+<body>
 	<div id="logo">
 		<h1><a href="#">毕业要求计算器 </a></h1>
 		<p><em> extension by cyblocker</em></p>
@@ -86,10 +58,13 @@ function restore_options() {
 						 <option value="bio_chem">生物化学系Chemistry (Chemical Biology)</option>
 						</select>
 						<br>
-						<button onclick="save_options()">保存Save!</button>		
+						<button id="save">保存Save!</button>		
 			</div>
+			<div id="status"></div>
 		  </div>			
+                  
 		</div><!-- end #content -->
+             
 		<div id="sidebar">
 			<ul>
 				<li>
@@ -110,4 +85,5 @@ function restore_options() {
 	</div>
 	<!-- end #footer -->
 </body>
+<script src="options.js"></script>
 </html>
