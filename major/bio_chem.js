@@ -22,9 +22,14 @@ stu_id = getmajor[1].firstChild.nodeValue;
 	{
 		CreditNeeds[1]++;CreditNeeds[2]--;
 	}
-	for(var i = 0; i < GPAtable.length; i++)
+	for(var i = 0; i < GPAtable.length-1; i++)
 	{
 		var j;
+                if(GPAtable[i+1].firstChild==null)
+                {
+                    i++;
+                    continue;
+                }
 		for(j = 0; j < daleipingtai.length ; j++)
 		{
 			if(GPAtable[i].firstChild.nodeValue == daleipingtai[j] && GPAtable[i+1].firstChild.nodeValue >= 60)

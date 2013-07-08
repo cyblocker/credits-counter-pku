@@ -21,9 +21,14 @@
 	var xueyuanCredit = Array(5,5,4,3,3,5,5,5,4,4,4,4,1,2,1,3,3,3,3,3,3);
 	var xueyuanCount = 0;
 	var xueyuanNeeds = 33;
-	for(var i = 0; i < GPAtable.length; i++)
+	for(var i = 0; i < GPAtable.length-1; i++)
 	{
 		var j;
+                if(GPAtable[i+1].firstChild==null)
+                {
+                    i++;
+                    continue;
+                }
 		for(j = 0; j < xueyuan.length ; j++)
 		{
 			if(GPAtable[i].firstChild.nodeValue == xueyuan[j] && GPAtable[i+1].firstChild.nodeValue >= 60)
