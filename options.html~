@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Familiar 
+Description: A two-column, fixed-width design for 1024x768 screen resolutions.
+Version    : 1.0
+Released   : 20091206
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>毕业要求计算器</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+<body>
+	<div id="logo">
+		<h1><a href="#">毕业要求计算器 </a></h1>
+		<p><em> extension by cyblocker</em></p>
+	</div>
+	<hr />
+	<!-- end #logo -->
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" class="first">首页</a></li>
+				<li class="current_page_item"><a href="#">选项</a></li>
+				<li><a href="about.html">关于</a></li>
+				<li><a href="contact.html">联系</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+		<!-- end #search -->
+	</div>
+	<!-- end #header -->
+	<!-- end #header-wrapper -->
+	<div id="page">
+		<div id="content">
+		  <div class="post">
+				<h2 class="title">设置您的专业Config your major</h2>
+				<div class="entry">
+					<p>您的专业your major:</p>
+						<select id="major">
+						 <option value="auto_detect">自动检测 Auto Detection</option>
+						 <option value="cis">智能科学系Intelligent Science and Technology</option>
+						 <option value="cs">计算机系Computer Science and Technology</option>
+						 <option value="ee">电子学系Electronics and Information Science and Technology</option>
+						 <option value="ime">微电子学系Microelectronics</option>
+						 <option value="chemistry">化学系Chemistry</option>
+						 <option value="mate_chem">材料化学系Material Chemistry</option>
+						 <option value="app_chem">应用化学系Applied Chemistry</option>
+						 <option value="bio_chem">生物化学系Chemistry (Chemical Biology)</option>
+						</select>
+						<br>
+						<button id="save">保存Save!</button>		
+			</div>
+		  </div>			
+                  <div id="status"></div>
+		</div><!-- end #content -->
+             
+		<div id="sidebar">
+			<ul>
+				<li>
+					<h2>Attention!请注意</h2>
+					<p>If you're not student from Yuanpei College and have chosen your major, no change in this page is required.</p>
+					<p>如果您不是元培学院的学生并且已经分了专业，您不需要在本页面修改任何设置。</p>
+				</li>
+				
+				
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+	<div id="footer">
+		<p>Copyright (c) 2012 cyblocker. All rights reserved. Design by <a href="http://www.freecsstemplates.org">FCT</a>.</p>
+	</div>
+	<!-- end #footer -->
+</body>
+<script src="options.js"></script>
+</html>
